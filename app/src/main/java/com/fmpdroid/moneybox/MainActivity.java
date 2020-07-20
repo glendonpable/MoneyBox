@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SharedPreferences preferences = getApplicationContext().getSharedPreferences(PREFERENCE, 0);
-        boolean isEmpty = preferences.getBoolean(TEMP_CHECK, true);
+        boolean isEmpty = true;//preferences.getBoolean(TEMP_CHECK, true);
         if (isEmpty){
             Intent myIntent = new Intent(MainActivity.this, EmptyActivity.class);
             MainActivity.this.startActivity(myIntent);
